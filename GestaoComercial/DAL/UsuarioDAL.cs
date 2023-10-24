@@ -13,7 +13,7 @@ namespace DAL
             {
                 SqlCommand cmd = cn.CreateCommand();
 
-           
+
                 cmd.CommandText = "INSERT INTO Usuario(Nome, NomeUsuario, Senha, Ativo) VALUES(@Nome, @NomeUsuario, @Senha, @Ativo)";
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -133,7 +133,7 @@ namespace DAL
             }
             finally
             {
-                cn.Close ();    
+                cn.Close();
             }
         }
         public Usuario BuscarPorId(int _id)
@@ -164,7 +164,7 @@ namespace DAL
                         usuario.Nome = rd["Nome"].ToString();
                         usuario.NomeUsuario = rd["NomeUsuario"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
-                        usuario.Ativo = Convert.ToBoolean(rd["NomeUsuario"]);                      
+                        usuario.Ativo = Convert.ToBoolean(rd["NomeUsuario"]);
                     }
                 }
                 return usuario;
@@ -178,6 +178,6 @@ namespace DAL
                 cn.Close();
             }
         }
-        
+
     }
 }

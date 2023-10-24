@@ -3,11 +3,11 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    internal class ClienteDAL
+    public class ClienteDAL
     {
         public void Inserir(Cliente _cliente)
         {
-            SqlConnection cn = new SqlConnection("User ID=SA;Initial Catalog=Mercearia;Data Source=.\\SQLEXPRESS2019;Password=Senailab02");
+            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
 
             try
             {
@@ -37,7 +37,7 @@ namespace DAL
         }
         public void Alterar(Cliente _cliente)
         {
-            SqlConnection cn = new SqlConnection("User ID=SA;Initial Catalog=Mercearia;Data Source=.\\SQLEXPRESS2019;Password=Senailab02");
+            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
 
             try
             {
@@ -68,7 +68,7 @@ namespace DAL
         }
         public void Excluir(int _id)
         {
-            SqlConnection cn = new SqlConnection("User ID=SA;Initial Catalog=Mercearia;Data Source=.\\SQLEXPRESS2019;Password=Senailab02");
+            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
 
             try
             {
@@ -126,7 +126,48 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o usuario no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o cliente no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public Cliente BuscarPorId(int _id)
+        {
+            Cliente cliente;
+
+            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+
+
+                cmd.CommandText = " SELECT Id, Nome, Fone FROM Cliente WHERE Id  = @Id";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", _id);
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    cliente = new Cliente();
+                    if (rd.Read())
+                    {
+                        cliente.Id = (int)rd["Id"];
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Fone = rd["Fone"].ToString();
+
+                    }
+                }
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o cliente no banco de dados.", ex);
             }
             finally
             {
