@@ -6,10 +6,10 @@ DECLARE @NomeUsuario VARCHAR(150)
 DECLARE @Senha VARCHAR(50)
 DECLARE @Ativo BIT
 
-SET @Nome = 'Leticia Lima'
-SET @NomeUsuario = 'Let66'
-SET @Senha = '0245DSFR'
-SET	@Ativo = 0
+SET @Nome = 'Maria Amélia'
+SET @NomeUsuario = 'MariNex'
+SET @Senha = 'ES254DTR'
+SET	@Ativo = 1
 
 INSERT INTO Usuario(Nome, NomeUsuario, Senha, Ativo) VALUES(@Nome, @NomeUsuario, @Senha, @Ativo)
 GO
@@ -33,5 +33,9 @@ DECLARE @ID INT
 SET @ID = 2
 
 DELETE FROM Usuario WHERE Id = @ID
+go
+
 
 SELECT*FROM Usuario
+
+DELETE FROM Usuario

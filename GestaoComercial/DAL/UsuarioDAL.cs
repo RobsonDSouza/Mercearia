@@ -120,7 +120,7 @@ namespace DAL
                         usuario.Nome = rd["Nome"].ToString();
                         usuario.NomeUsuario = rd["NomeUsuario"].ToString();
                         usuario.Senha = rd["Senha"].ToString();
-                        usuario.Ativo = Convert.ToBoolean(rd["NomeUsuario"]);
+                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
                         usuarioList.Add(usuario);
                     }
                 }
