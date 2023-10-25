@@ -174,5 +174,48 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<Cliente> BuscarPorNome(string _nome)
+        {
+            List<Cliente> clienteList = new List<Cliente>();
+            Cliente cliente;
+
+            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+
+
+                cmd.CommandText = " SELECT Id, Nome, Fone FROM Cliente WHERE Nome LIKE @Nome";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        cliente = new Cliente();
+                        cliente.Id = (int)rd["Id"];
+                        cliente.Nome = rd["Nome"].ToString();
+                        cliente.Fone = rd["Fone"].ToString();
+                        clienteList.Add(cliente);
+                    }
+                }
+                return clienteList;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar o cliente por nome no banco de dados.", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
