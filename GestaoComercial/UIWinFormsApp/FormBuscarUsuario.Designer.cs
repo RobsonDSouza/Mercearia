@@ -36,28 +36,28 @@
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
-            this.bindingSourceUsuario = new System.Windows.Forms.BindingSource(this.components);
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bindingSourceUsuario = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxBuscarPor
             // 
-            this.textBoxBuscarPor.Location = new System.Drawing.Point(12, 103);
+            this.textBoxBuscarPor.Location = new System.Drawing.Point(162, 104);
             this.textBoxBuscarPor.Name = "textBoxBuscarPor";
-            this.textBoxBuscarPor.Size = new System.Drawing.Size(434, 27);
+            this.textBoxBuscarPor.Size = new System.Drawing.Size(353, 27);
             this.textBoxBuscarPor.TabIndex = 0;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(452, 102);
+            this.buttonBuscar.Location = new System.Drawing.Point(521, 102);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(94, 29);
             this.buttonBuscar.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(552, 102);
+            this.buttonAlterar.Location = new System.Drawing.Point(621, 102);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(94, 29);
             this.buttonAlterar.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(652, 101);
+            this.buttonInserir.Location = new System.Drawing.Point(721, 101);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(94, 29);
             this.buttonInserir.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(752, 101);
+            this.buttonExcluir.Location = new System.Drawing.Point(821, 101);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(94, 29);
             this.buttonExcluir.TabIndex = 1;
@@ -98,32 +98,23 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(859, 66);
+            this.label1.Size = new System.Drawing.Size(927, 66);
             this.label1.TabIndex = 2;
             this.label1.Text = "Buscar usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(652, 409);
+            this.buttonSalvar.Location = new System.Drawing.Point(721, 409);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
             this.buttonSalvar.TabIndex = 1;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(752, 409);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 29);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "button1";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(752, 409);
+            this.buttonCancelar.Location = new System.Drawing.Point(821, 409);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
             this.buttonCancelar.TabIndex = 1;
@@ -134,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 80);
+            this.label2.Location = new System.Drawing.Point(12, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 2;
@@ -157,12 +148,8 @@
             this.dataGridViewUsuario.ReadOnly = true;
             this.dataGridViewUsuario.RowHeadersWidth = 51;
             this.dataGridViewUsuario.RowTemplate.Height = 29;
-            this.dataGridViewUsuario.Size = new System.Drawing.Size(834, 267);
+            this.dataGridViewUsuario.Size = new System.Drawing.Size(903, 267);
             this.dataGridViewUsuario.TabIndex = 3;
-            // 
-            // bindingSourceUsuario
-            // 
-            this.bindingSourceUsuario.DataSource = typeof(Models.Usuario);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -191,16 +178,32 @@
             this.ativoDataGridViewCheckBoxColumn.ReadOnly = true;
             this.ativoDataGridViewCheckBoxColumn.Width = 60;
             // 
+            // bindingSourceUsuario
+            // 
+            this.bindingSourceUsuario.DataSource = typeof(Models.Usuario);
+            // 
+            // comboBoxBuscarPor
+            // 
+            this.comboBoxBuscarPor.FormattingEnabled = true;
+            this.comboBoxBuscarPor.Items.AddRange(new object[] {
+            "Nome",
+            "Nome de usuário",
+            "Todos"});
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 103);
+            this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(144, 28);
+            this.comboBoxBuscarPor.TabIndex = 4;
+            // 
             // FormBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 450);
+            this.ClientSize = new System.Drawing.Size(927, 450);
+            this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.dataGridViewUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
@@ -225,7 +228,6 @@
         private Button buttonExcluir;
         private Label label1;
         private Button buttonSalvar;
-        private Button button6;
         private Button buttonCancelar;
         private Label label2;
         private DataGridView dataGridViewUsuario;
@@ -233,5 +235,6 @@
         private DataGridViewTextBoxColumn nomeUsuarioDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn ativoDataGridViewCheckBoxColumn;
         private BindingSource bindingSourceUsuario;
+        private ComboBox comboBoxBuscarPor;
     }
 }
