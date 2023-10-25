@@ -32,10 +32,9 @@ GO
 DECLARE @ID INT
 SET @ID = 2
 
-DELETE FROM Usuario WHERE Id = @ID
-go
+select *from Usuario
 
-
-SELECT*FROM Usuario
-
-DELETE FROM Usuario
+INSERT INTO Produto(Nome, Preco, Estoque, CodigoDeBarras) VALUES('Arroz',28.68,35,'0004589870351')
+INSERT INTO Produto(Nome, Preco, Estoque, CodigoDeBarras) VALUES('Feijão',8.49,24,'0804589870300')
+INSERT INTO Produto(Nome, Preco, Estoque, CodigoDeBarras) VALUES('Açúcar',5.80,65,'0045500254008')
+INSERT INTO Produto(Nome, Preco, Estoque, CodigoDeBarras) VALUES('Macarrão',3.90,12,'0254005874009')

@@ -32,6 +32,10 @@ namespace BLL
         {
             return new ProdutoDAL().BuscarPorCodigoDeBarras(_codigoDeBarras);
         }
+        public List<Produto> BuscarPorNome(string _nome)
+        {
+            return new ProdutoDAL().BuscarPorNome(_nome);
+        }
     }
 }
 

@@ -116,12 +116,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        usuario = new Usuario();
-                        usuario.Id = (int)rd["Id"];
-                        usuario.Nome = rd["Nome"].ToString();
-                        usuario.NomeUsuario = rd["NomeUsuario"].ToString();
-                        usuario.Senha = rd["Senha"].ToString();
-                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario = PreencherObjeto(rd);
                         usuarioList.Add(usuario);
                     }
                 }
@@ -137,6 +132,17 @@ namespace DAL
                 cn.Close();
             }
         }
+        private static Usuario PreencherObjeto(SqlDataReader rd)
+        {
+            Usuario usuario = new Usuario();
+            usuario.Id = (int)rd["Id"];
+            usuario.Nome = rd["Nome"].ToString();
+            usuario.NomeUsuario = rd["NomeUsuario"].ToString();
+            usuario.Senha = rd["Senha"].ToString();
+            usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+            return usuario;
+        }
+
         public Usuario BuscarPorId(int _id)
         {
             Usuario usuario;
@@ -161,11 +167,7 @@ namespace DAL
                     usuario = new Usuario();
                     if (rd.Read())
                     {
-                        usuario.Id = (int)rd["Id"];
-                        usuario.Nome = rd["Nome"].ToString();
-                        usuario.NomeUsuario = rd["NomeUsuario"].ToString();
-                        usuario.Senha = rd["Senha"].ToString();
-                        usuario.Ativo = Convert.ToBoolean(rd["NomeUsuario"]);
+                        usuario = PreencherObjeto(rd);
                     }
                 }
                 return usuario;
@@ -203,13 +205,7 @@ namespace DAL
                 {
                     while (rd.Read())
                     {
-                        usuario = new Usuario();
-                        usuario.Id = (int)rd["Id"];
-                        usuario.Nome = rd["Nome"].ToString();
-                        usuario.NomeUsuario = rd["NomeUsuario"].ToString();
-                        usuario.Senha = rd["Senha"].ToString();
-                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
-                        usuarioList.Add(usuario);
+                        usuario = PreencherObjeto(rd);
                     }
                 }
                 return usuarioList;
@@ -248,11 +244,7 @@ namespace DAL
                     usuario = new Usuario();
                     if (rd.Read())
                     {
-                        usuario.Id = (int)rd["Id"];
-                        usuario.Nome = rd["Nome"].ToString();
-                        usuario.NomeUsuario = rd["NomeUsuario"].ToString();
-                        usuario.Senha = rd["Senha"].ToString();
-                        usuario.Ativo = Convert.ToBoolean(rd["Ativo"]);
+                        usuario = PreencherObjeto(rd);
                     }
                 }
                 return usuario;
