@@ -7,7 +7,7 @@ namespace DAL
     {
         public void Inserir(Produto _produto)
         {
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
@@ -40,7 +40,7 @@ namespace DAL
         }
         public void Alterar(Produto _produto)
         {
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
@@ -74,7 +74,7 @@ namespace DAL
         }
         public void Excluir(int _id)
         {
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
@@ -104,7 +104,7 @@ namespace DAL
             List<Produto> produtoList = new List<Produto>();
             Produto produto;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
@@ -146,7 +146,7 @@ namespace DAL
         {
             Produto produto;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
@@ -189,7 +189,7 @@ namespace DAL
             List<Produto> produtoList = new List<Produto>();
             Produto produto;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
@@ -233,14 +233,13 @@ namespace DAL
         {
             Produto produto;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
 
-
-                cmd.CommandText = "SELECT Id, Nome, Preco, Estoque, CodigoDeBarras Ativo FROM Usuario WHERE CodigoDeBarras  = @CodigoDeBarras";
+                cmd.CommandText = "SELECT Id, Nome, Preco, Estoque, CodigoDeBarras FROM Produto WHERE CodigoDeBarras  = @CodigoDeBarras";
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
