@@ -49,7 +49,7 @@
             // 
             this.checkBoxAtivo.AutoSize = true;
             this.checkBoxAtivo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceCadastro, "Ativo", true));
-            this.checkBoxAtivo.Location = new System.Drawing.Point(404, 170);
+            this.checkBoxAtivo.Location = new System.Drawing.Point(404, 173);
             this.checkBoxAtivo.Name = "checkBoxAtivo";
             this.checkBoxAtivo.Size = new System.Drawing.Size(66, 24);
             this.checkBoxAtivo.TabIndex = 34;
@@ -162,6 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(800, 365);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);

@@ -10,8 +10,12 @@ namespace UIWinFormsApp
         {
             InitializeComponent();
             id = _id;
-        }
 
+            if(id== 0)
+               bindingSourceCadastro.AddNew();
+            else
+               bindingSourceCadastro.DataSource = new UsuarioBLL().BuscarPorId(id);
+        }
         private void checkBoxAtivo_CheckedChanged(object sender, EventArgs e)
         {
 
