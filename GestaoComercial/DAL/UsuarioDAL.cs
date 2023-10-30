@@ -240,6 +240,7 @@ namespace DAL
                     while (rd.Read())
                     {
                         usuario = PreencherObjeto(rd);
+                        usuarioList.Add(usuario);
                     }
                 }
                 return usuarioList;

@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,35 @@ namespace UIWinFormsApp
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void buttonInserir_Click(object sender, EventArgs e)
+        {
+            using (FormCadastrarCliente frm = new FormCadastrarCliente())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            int id = ((Cliente)bindingSourceCliente.Current).Id;
+
+            using (FormCadastrarCliente frm = new FormCadastrarCliente(id))
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente excluir esse registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
+
+            int id = ((Cliente)bindingSourceCliente.Current).Id;
+            new ClienteBLL().Excluir(id);
+            bindingSourceCliente.RemoveCurrent();
+            MessageBox.Show("Registro excluido com sucesso!");
         }
     }
 }

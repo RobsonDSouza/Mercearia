@@ -187,6 +187,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Nome",
@@ -216,6 +217,7 @@
             this.Controls.Add(this.textBoxBuscarPor);
             this.Name = "FormBuscarUsuario";
             this.Text = "FormBuscarUsuario";
+            this.Load += new System.EventHandler(this.FormBuscarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUsuario)).EndInit();
             this.ResumeLayout(false);

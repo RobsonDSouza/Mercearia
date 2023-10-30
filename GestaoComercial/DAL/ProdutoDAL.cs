@@ -53,7 +53,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Produto SET(Nome = @Nome, Preco = @Preco, Estoque = @Estoque, CodigoDeBarras = @CodigoDeBarras) WHERE Id = @Id"))
+                using (SqlCommand cmd = new SqlCommand("UPDATE Produto SET Nome = @Nome, Preco = @Preco, Estoque = @Estoque, CodigoDeBarras = @CodigoDeBarras WHERE Id = @Id"))
                 {
                     try
                     {

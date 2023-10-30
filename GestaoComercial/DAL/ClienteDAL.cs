@@ -52,7 +52,7 @@ namespace DAL
 
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Cliente SET(Nome = @Nome, Fone = @Fone) WHERE Id = @Id"))
+                using (SqlCommand cmd = new SqlCommand("UPDATE Cliente SET Nome = @Nome, Fone = @Fone WHERE Id = @Id"))
                 {
                     try
                     {

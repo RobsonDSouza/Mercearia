@@ -157,6 +157,7 @@
             this.buttonCancelar.TabIndex = 37;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.checkBoxAtivo_CheckedChanged);
             // 
             // FormCadastrarUsuario
             // 
