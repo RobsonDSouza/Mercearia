@@ -49,9 +49,10 @@
             // 
             this.checkBoxAtivo.AutoSize = true;
             this.checkBoxAtivo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceCadastro, "Ativo", true));
+            this.checkBoxAtivo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxAtivo.Location = new System.Drawing.Point(404, 173);
             this.checkBoxAtivo.Name = "checkBoxAtivo";
-            this.checkBoxAtivo.Size = new System.Drawing.Size(66, 24);
+            this.checkBoxAtivo.Size = new System.Drawing.Size(67, 24);
             this.checkBoxAtivo.TabIndex = 34;
             this.checkBoxAtivo.Text = "Ativo";
             this.checkBoxAtivo.UseVisualStyleBackColor = true;
@@ -95,47 +96,52 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 36;
             this.label1.Text = "Nome";
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(800, 54);
             this.label2.TabIndex = 36;
             this.label2.Text = "Cadastrar Usuário";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(404, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.Size = new System.Drawing.Size(129, 20);
             this.label3.TabIndex = 36;
             this.label3.Text = "Nome de Usuario";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(13, 147);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 36;
             this.label4.Text = "Senha";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(212, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 20);
+            this.label5.Size = new System.Drawing.Size(163, 20);
             this.label5.TabIndex = 36;
             this.label5.Text = "Confirmação de Senha";
             // 

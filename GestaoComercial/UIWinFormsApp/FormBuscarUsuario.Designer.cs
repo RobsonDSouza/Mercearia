@@ -35,7 +35,6 @@
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
@@ -105,15 +104,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Buscar usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.Location = new System.Drawing.Point(721, 409);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
-            this.buttonSalvar.TabIndex = 1;
-            this.buttonSalvar.Text = "&Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
             // 
             // buttonCancelar
             // 
@@ -209,7 +199,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
             this.Controls.Add(this.buttonAlterar);
@@ -233,7 +222,6 @@
         private Button buttonInserir;
         private Button buttonExcluir;
         private Label label1;
-        private Button buttonSalvar;
         private Button buttonCancelar;
         private Label label2;
         private DataGridView dataGridViewUsuario;

@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
@@ -152,15 +151,6 @@
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.Location = new System.Drawing.Point(714, 415);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
-            this.buttonSalvar.TabIndex = 7;
-            this.buttonSalvar.Text = "&Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            // 
             // buttonExcluir
             // 
             this.buttonExcluir.Location = new System.Drawing.Point(814, 107);
@@ -212,13 +202,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(913, 450);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.dataGridViewProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
             this.Controls.Add(this.buttonAlterar);
@@ -240,7 +230,6 @@
         private Label label2;
         private Label label1;
         private Button buttonCancelar;
-        private Button buttonSalvar;
         private Button buttonExcluir;
         private Button buttonInserir;
         private Button buttonAlterar;
