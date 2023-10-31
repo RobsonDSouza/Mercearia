@@ -28,9 +28,9 @@ namespace UIWinFormsApp
                 Usuario usuario = (Usuario)bindingSourceCadastro.Current;
 
                 if(id == 0)                   
-                    new UsuarioBLL().Inserir(usuario);                
+                    new UsuarioBLL().Inserir(usuario, textBoxConfirmacaoDeSenha.Text);                
                 else                
-                    new UsuarioBLL().Alterar(usuario);
+                    new UsuarioBLL().Alterar(usuario, textBoxConfirmacaoDeSenha.Text);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 this.Close();

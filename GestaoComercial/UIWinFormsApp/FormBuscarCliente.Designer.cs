@@ -42,6 +42,7 @@
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.textBoxBuscarPor = new System.Windows.Forms.TextBox();
+            this.buttonSelecionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCliente)).BeginInit();
             this.SuspendLayout();
@@ -56,13 +57,16 @@
             this.comboBoxBuscarPor.Location = new System.Drawing.Point(2, 111);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(144, 28);
-            this.comboBoxBuscarPor.TabIndex = 26;
+            this.comboBoxBuscarPor.TabIndex = 10;
             // 
             // dataGridViewCliente
             // 
             this.dataGridViewCliente.AllowUserToAddRows = false;
             this.dataGridViewCliente.AllowUserToDeleteRows = false;
             this.dataGridViewCliente.AllowUserToOrderColumns = true;
+            this.dataGridViewCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCliente.AutoGenerateColumns = false;
             this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -74,8 +78,8 @@
             this.dataGridViewCliente.ReadOnly = true;
             this.dataGridViewCliente.RowHeadersWidth = 51;
             this.dataGridViewCliente.RowTemplate.Height = 29;
-            this.dataGridViewCliente.Size = new System.Drawing.Size(903, 267);
-            this.dataGridViewCliente.TabIndex = 25;
+            this.dataGridViewCliente.Size = new System.Drawing.Size(900, 288);
+            this.dataGridViewCliente.TabIndex = 6;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -105,7 +109,7 @@
             this.label2.Location = new System.Drawing.Point(3, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 23;
+            this.label2.TabIndex = 9;
             this.label2.Text = "Buscar por";
             // 
             // label1
@@ -114,17 +118,18 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(909, 66);
-            this.label1.TabIndex = 24;
+            this.label1.Size = new System.Drawing.Size(908, 66);
+            this.label1.TabIndex = 0;
             this.label1.Text = "Buscar cliente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(812, 416);
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelar.Location = new System.Drawing.Point(811, 437);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 17;
+            this.buttonCancelar.TabIndex = 8;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -134,7 +139,7 @@
             this.buttonExcluir.Location = new System.Drawing.Point(812, 108);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(94, 29);
-            this.buttonExcluir.TabIndex = 19;
+            this.buttonExcluir.TabIndex = 5;
             this.buttonExcluir.Text = "E&xcluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
             this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
@@ -144,7 +149,7 @@
             this.buttonInserir.Location = new System.Drawing.Point(712, 108);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(94, 29);
-            this.buttonInserir.TabIndex = 20;
+            this.buttonInserir.TabIndex = 4;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
             this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
@@ -154,7 +159,7 @@
             this.buttonAlterar.Location = new System.Drawing.Point(612, 109);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(94, 29);
-            this.buttonAlterar.TabIndex = 21;
+            this.buttonAlterar.TabIndex = 3;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
             this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
@@ -164,7 +169,7 @@
             this.buttonBuscar.Location = new System.Drawing.Point(512, 109);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(94, 29);
-            this.buttonBuscar.TabIndex = 22;
+            this.buttonBuscar.TabIndex = 2;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
@@ -174,14 +179,26 @@
             this.textBoxBuscarPor.Location = new System.Drawing.Point(153, 111);
             this.textBoxBuscarPor.Name = "textBoxBuscarPor";
             this.textBoxBuscarPor.Size = new System.Drawing.Size(353, 27);
-            this.textBoxBuscarPor.TabIndex = 16;
+            this.textBoxBuscarPor.TabIndex = 1;
+            // 
+            // buttonSelecionar
+            // 
+            this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSelecionar.Location = new System.Drawing.Point(709, 437);
+            this.buttonSelecionar.Name = "buttonSelecionar";
+            this.buttonSelecionar.Size = new System.Drawing.Size(94, 29);
+            this.buttonSelecionar.TabIndex = 7;
+            this.buttonSelecionar.Text = "Se&lecionar";
+            this.buttonSelecionar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSelecionar.UseVisualStyleBackColor = true;
             // 
             // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancelar;
-            this.ClientSize = new System.Drawing.Size(909, 450);
+            this.ClientSize = new System.Drawing.Size(908, 471);
+            this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Controls.Add(this.dataGridViewCliente);
             this.Controls.Add(this.label2);
@@ -193,6 +210,7 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.textBoxBuscarPor);
             this.Name = "FormBuscarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBuscarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCliente)).EndInit();
@@ -216,5 +234,6 @@
         private BindingSource bindingSourceCliente;
         private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn foneDataGridViewTextBoxColumn;
+        private Button buttonSelecionar;
     }
 }

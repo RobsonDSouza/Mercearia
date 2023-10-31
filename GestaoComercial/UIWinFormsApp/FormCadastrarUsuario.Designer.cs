@@ -53,7 +53,7 @@
             this.checkBoxAtivo.Location = new System.Drawing.Point(404, 173);
             this.checkBoxAtivo.Name = "checkBoxAtivo";
             this.checkBoxAtivo.Size = new System.Drawing.Size(67, 24);
-            this.checkBoxAtivo.TabIndex = 34;
+            this.checkBoxAtivo.TabIndex = 9;
             this.checkBoxAtivo.Text = "Ativo";
             this.checkBoxAtivo.UseVisualStyleBackColor = true;
             this.checkBoxAtivo.CheckedChanged += new System.EventHandler(this.checkBoxAtivo_CheckedChanged);
@@ -64,34 +64,38 @@
             // 
             // textBoxNome
             // 
+            this.textBoxNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastro, "Nome", true));
             this.textBoxNome.Location = new System.Drawing.Point(12, 109);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(386, 27);
-            this.textBoxNome.TabIndex = 35;
+            this.textBoxNome.TabIndex = 2;
             // 
             // textBoxNomeDeUsuario
             // 
+            this.textBoxNomeDeUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxNomeDeUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastro, "NomeUsuario", true));
             this.textBoxNomeDeUsuario.Location = new System.Drawing.Point(404, 109);
             this.textBoxNomeDeUsuario.Name = "textBoxNomeDeUsuario";
             this.textBoxNomeDeUsuario.Size = new System.Drawing.Size(386, 27);
-            this.textBoxNomeDeUsuario.TabIndex = 35;
+            this.textBoxNomeDeUsuario.TabIndex = 4;
             // 
             // textBoxSenha
             // 
+            this.textBoxSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSenha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastro, "Senha", true));
             this.textBoxSenha.Location = new System.Drawing.Point(13, 170);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(193, 27);
-            this.textBoxSenha.TabIndex = 35;
+            this.textBoxSenha.TabIndex = 6;
             // 
             // textBoxConfirmacaoDeSenha
             // 
+            this.textBoxConfirmacaoDeSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxConfirmacaoDeSenha.Location = new System.Drawing.Point(212, 170);
             this.textBoxConfirmacaoDeSenha.Name = "textBoxConfirmacaoDeSenha";
             this.textBoxConfirmacaoDeSenha.Size = new System.Drawing.Size(186, 27);
-            this.textBoxConfirmacaoDeSenha.TabIndex = 35;
+            this.textBoxConfirmacaoDeSenha.TabIndex = 8;
             // 
             // label1
             // 
@@ -100,7 +104,7 @@
             this.label1.Location = new System.Drawing.Point(12, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 36;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
             // label2
@@ -110,7 +114,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(800, 54);
-            this.label2.TabIndex = 36;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Cadastrar Usuário";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -122,7 +126,7 @@
             this.label3.Location = new System.Drawing.Point(404, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 20);
-            this.label3.TabIndex = 36;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Nome de Usuario";
             // 
             // label4
@@ -132,7 +136,7 @@
             this.label4.Location = new System.Drawing.Point(13, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 36;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Senha";
             // 
             // label5
@@ -142,25 +146,27 @@
             this.label5.Location = new System.Drawing.Point(212, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 20);
-            this.label5.TabIndex = 36;
+            this.label5.TabIndex = 7;
             this.label5.Text = "Confirmação de Senha";
             // 
             // buttonSalvar
             // 
+            this.buttonSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSalvar.Location = new System.Drawing.Point(596, 324);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
-            this.buttonSalvar.TabIndex = 37;
+            this.buttonSalvar.TabIndex = 10;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.Location = new System.Drawing.Point(696, 324);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 37;
+            this.buttonCancelar.TabIndex = 11;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.checkBoxAtivo_CheckedChanged);
@@ -183,8 +189,12 @@
             this.Controls.Add(this.textBoxNomeDeUsuario);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.checkBoxAtivo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastrarUsuario";
-            this.Text = "FormCadastrarUsuario";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

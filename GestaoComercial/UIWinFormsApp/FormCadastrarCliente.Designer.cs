@@ -46,8 +46,8 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(800, 54);
-            this.label2.TabIndex = 43;
+            this.label2.Size = new System.Drawing.Size(410, 84);
+            this.label2.TabIndex = 0;
             this.label2.Text = "Cadastrar Cliente";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -57,19 +57,19 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(693, 198);
+            this.buttonCancelar.Location = new System.Drawing.Point(209, 289);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 48;
+            this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(593, 198);
+            this.buttonSalvar.Location = new System.Drawing.Point(109, 289);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
-            this.buttonSalvar.TabIndex = 49;
+            this.buttonSalvar.TabIndex = 5;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -78,44 +78,44 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(404, 97);
+            this.label3.Location = new System.Drawing.Point(12, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 20);
-            this.label3.TabIndex = 46;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Telefone";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 97);
+            this.label1.Location = new System.Drawing.Point(12, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 47;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
             // textBoxTelefone
             // 
             this.textBoxTelefone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastro, "Fone", true));
-            this.textBoxTelefone.Location = new System.Drawing.Point(404, 120);
+            this.textBoxTelefone.Location = new System.Drawing.Point(12, 202);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(386, 27);
-            this.textBoxTelefone.TabIndex = 41;
+            this.textBoxTelefone.TabIndex = 4;
             // 
             // textBoxNome
             // 
             this.textBoxNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCadastro, "Nome", true));
-            this.textBoxNome.Location = new System.Drawing.Point(12, 120);
+            this.textBoxNome.Location = new System.Drawing.Point(12, 142);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(386, 27);
-            this.textBoxNome.TabIndex = 42;
+            this.textBoxNome.TabIndex = 2;
             // 
             // FormCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancelar;
-            this.ClientSize = new System.Drawing.Size(800, 239);
+            this.ClientSize = new System.Drawing.Size(410, 365);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
@@ -123,8 +123,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.textBoxNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastrarCliente";
-            this.Text = "FormCadastrarCliente";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
